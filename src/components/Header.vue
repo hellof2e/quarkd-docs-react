@@ -16,7 +16,6 @@
 
         <div class="toper-bar">
           <div class="menu-group">
-            <!-- 指南 / 组件 -->
             <div class="nav-item menu" v-for="item in header" :key="item.name">
               <template v-if="item.name === 'Components'">
                 <a
@@ -36,6 +35,78 @@
                   {{ isZhLang ? item.cName : item.name }}
                 </a>
               </template>
+            </div>
+
+            <!-- 技术栈文档 -->
+            <div class="nav-item flyout">
+              <button type="button">
+                <span>{{ ecosystemLangs.docs }}</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                  class="flyout-button-text-icon"
+                >
+                  <path
+                    d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z"
+                  ></path>
+                </svg>
+              </button>
+
+              <div class="flyout-menu">
+                <div class="menu-wrap">
+                  <div class="menu-items">
+                    <div class="menu-item-group">
+                      <p class="menu-group-title">
+                        {{ ecosystemLangs.docsTitle }}
+                      </p>
+                      <a
+                        v-for="(item, index) in ecosystemLangs.stacks"
+                        :key="index"
+                        class="link menu-link"
+                        :href="`https://${item}-quarkdesign.hellobike.com/#/en-US/component/button`"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {{ item }} {{ isZhLang ? "文档" : "documentation" }}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                          focusable="false"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          width="24px"
+                          class="link-icon"
+                        >
+                          <path d="M0 0h24v24H0V0z" fill="none"></path>
+                          <path
+                            d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"
+                          ></path>
+                        </svg>
+                      </a>
+                      <p class="link menu-link" style="color: #aaa">
+                        Angular (Work in progress)
+                      </p>
+                      <p class="link menu-link" style="color: #aaa">
+                        Svelte (Work in progress)
+                      </p>
+                      <p class="link menu-link" style="color: #aaa">
+                        Javascript (Work in progress)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav-item menu">
+              <a
+                target="_blank"
+                href="https://quark-playground.hellobike.com/#/hello-world"
+              >
+                Playground
+              </a>
             </div>
 
             <div class="nav-item flyout">
@@ -263,23 +334,41 @@ export default defineComponent({
     const langs = {
       "zh-CN": {
         ecosystem: "生态系统",
-        officialLibrary: "官方库",
+        docsTitle: "组件库文档",
+        docs: "组件库文档",
+        officialLibrary: "官方工具",
         stack: "用 Quark 构建跨技术栈组件",
         noFrame: "用 Quark 构建无框架应用（Beta）",
         resources: "资源",
         vscodePlugin: "VSCode 插件",
         help: "帮助",
         gitHubDiscussions: "GitHub 论坛",
+        stacks: [
+          "Vue",
+          "React",
+          // "Svelte(开发中)",
+          // "Angular(开发中)",
+          // "JS/JQ(开发中)",
+        ],
       },
       "en-US": {
         ecosystem: "Ecosystem",
-        officialLibrary: "OFFICIAL LIBRARIES",
+        docsTitle: "Docs",
+        docs: "Docs",
+        officialLibrary: "Offical Tools",
         stack: "Building cross-technology-stack components with Quark",
         noFrame: "Building frameworkless applications with Quark (Beta)",
         resources: "RESOURCES",
         vscodePlugin: "VSCode Plugin",
         help: "HELP",
         gitHubDiscussions: "GitHub Discussions",
+        stacks: [
+          "Vue",
+          "React",
+          // "Svelte(Work in progress)",
+          // "Angular(Work in progress)",
+          // "JS/JQ(Work in progress)",
+        ],
       },
     };
     const ecosystemLangs = computed(() => {

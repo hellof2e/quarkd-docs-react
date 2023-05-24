@@ -9,14 +9,14 @@ export default {
       pathName: "#/zh-CN/guide/introduction",
       pathEnName: "#/en-US/guide/introduction", // TODO: 临时方案
     },
-    {
-      name: "Components",
-      cName: "组件",
-      type: "component",
-      path: "#/component/button",
-      pathName: "#/zh-CN/component/button",
-      pathEnName: "#/en-US/component/button", // TODO: 临时方案
-    },
+    // {
+    //   name: "Components",
+    //   cName: "组件",
+    //   type: "component",
+    //   path: "#/component/button",
+    //   pathName: "#/zh-CN/component/button",
+    //   pathEnName: "#/en-US/component/button", // TODO: 临时方案
+    // },
   ],
   docs: {
     name: "指南",
