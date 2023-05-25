@@ -418,7 +418,9 @@ export default defineComponent({
         container: "#docsearch",
         appId: "EA4BY59U66",
         indexName:
-          localStorage.getItem("language") === "en-US" ? "ENDoc" : "CNDoc",
+          localStorage.getItem("language") === "en-US"
+            ? "react-ENDoc"
+            : "react-CNDoc",
         apiKey: "5d1fd7c976a98a74421011f1374dd200",
         debug: true,
       });
