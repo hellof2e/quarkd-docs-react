@@ -1,5 +1,5 @@
 <template>
-  <doc-header></doc-header>
+  <quark-doc-header></quark-doc-header>
 
   <main class="home-main">
     <section class="home-section">
@@ -240,13 +240,12 @@ import {
   onUnmounted,
 } from "vue";
 import { useI18n } from "vue-i18n";
-import Header from "@/components/Header.vue";
 import CodeDemo from "./components/codedemo/index.vue";
+import "quark-doc-header/lib/index";
 
 export default defineComponent({
   name: "Main",
   components: {
-    [Header.name]: Header,
     CodeDemo,
   },
   setup() {

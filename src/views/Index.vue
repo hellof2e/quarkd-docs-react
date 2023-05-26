@@ -1,5 +1,5 @@
 <template>
-  <doc-header></doc-header>
+  <quark-doc-header></quark-doc-header>
 
   <doc-nav :fixed="fixed"></doc-nav>
 
@@ -26,14 +26,13 @@ import {
   useRoute,
   useRouter,
 } from "vue-router";
-import Header from "@/components/Header.vue";
 import Nav from "@/components/Nav.vue";
 import DemoPreview from "@/components/DemoPreview.vue";
+import "quark-doc-header/lib/index";
 
 export default defineComponent({
   name: "doc",
   components: {
-    [Header.name]: Header,
     [Nav.name]: Nav,
     [DemoPreview.name]: DemoPreview,
   },
