@@ -1,7 +1,7 @@
 {
   "name": "quark-design-docs",
   "version": "1.0.0",
-  "description": "Mobile UI Components built on Web Components.",
+  "description": "Quark Design Documentation, built on Web Components.",
   "keywords": [
     "web components",
     "quarkd",
