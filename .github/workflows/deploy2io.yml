@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v3 # 设置node版本
         with:
           node-version: 16
-      - run: yarn install
+      - run: npm install
       - run: npm run build
 
       - name: Sync
