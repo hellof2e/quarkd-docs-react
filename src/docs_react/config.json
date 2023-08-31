@@ -420,6 +420,16 @@
         },
         {
           "version": "0.0.1",
+          "name": "PickerView",
+          "sort": 1,
+          "cName": "选择器视图",
+          "type": "component",
+          "show": true,
+          "desc": "选择器",
+          "author": "yhy"
+        },
+        {
+          "version": "0.0.1",
           "name": "Radio",
           "sort": 1,
           "cName": "单选框",
