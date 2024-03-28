@@ -17,7 +17,7 @@ if (localStorage.getItem("language") === null) {
 }
 
 if (isMobile) {
- location.replace("https://quark-design.hellobike.com/demo/demo.html#/");
+ location.replace("https://quark-ecosystem.github.io/quarkd-docs/h5/demo#/");
 }
 
 const app = createApp(App);
