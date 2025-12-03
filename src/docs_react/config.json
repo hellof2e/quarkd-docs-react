@@ -527,6 +527,16 @@
           "show": true,
           "desc": "上传",
           "author": "yhy"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Slider",
+          "sort": 1,
+          "cName": "滑块",
+          "type": "component",
+          "show": true,
+          "desc": "滑块",
+          "author": "dushichen"
         }
       ]
     },
